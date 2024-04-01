@@ -10,6 +10,10 @@ import SwiftUI
 struct FollowerBottonSheet: View {
     var onDelete: () -> Void
     var onDismiss: () -> Void
+    let messageLines = [
+            "Once you remove a follower, they",
+            "will need to request to follow again."
+        ]
 
     var body: some View {
         VStack {
@@ -17,9 +21,10 @@ struct FollowerBottonSheet: View {
                 .font(.system(size: 32, weight: .semibold))
                 .padding()
             
-            Text("Once you remove a follower, they will need to request to follow again.")
-                .font(.system(size: 16, weight: .semibold))
-                .padding()
+            ForEach(messageLines, id: \.self) { line in
+                            Text(line)
+                                .font(.system(size: 16, weight: .semibold))
+                        }
             
             Button(action: onDelete) {
                 Text("Yes, remove")
@@ -32,6 +37,7 @@ struct FollowerBottonSheet: View {
             }
             .padding(.horizontal)
             .padding(.bottom)
+            .padding(.top)
             
             Button(action: onDismiss) {
                 Text("No, go back")

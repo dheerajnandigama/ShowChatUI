@@ -10,6 +10,10 @@ import SwiftUI
 struct BottomSheetView: View {
     var onDelete: () -> Void
     var onDismiss: () -> Void
+    let messageLines = [
+            "Deleting a room removes",
+            "everyone from it."
+        ]
 
     var body: some View {
         VStack {
@@ -17,9 +21,10 @@ struct BottomSheetView: View {
                 .font(.system(size: 32, weight: .semibold))
                 .padding()
             
-            Text("Deleting a room removes everyone from it.")
-                .font(.system(size: 16, weight: .semibold))
-                .padding()
+            ForEach(messageLines, id: \.self) { line in
+                            Text(line)
+                                .font(.system(size: 16, weight: .semibold))
+                        }
             
             Button(action: onDelete) {
                 Text("Yes, delete")
@@ -32,6 +37,7 @@ struct BottomSheetView: View {
             }
             .padding(.horizontal)
             .padding(.bottom)
+            .padding(.top)
             
             Button(action: onDismiss) {
                 Text("No, go back")
