@@ -15,9 +15,15 @@ struct FollowerListView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
                 
+                // Search Bar View Model
+                
                 SearchBarViewModel()
                 
+                // Room View
+                
                 RoomView()
+                
+                // Individual Follower View
                 
                 IndividualFollowerView()
             }

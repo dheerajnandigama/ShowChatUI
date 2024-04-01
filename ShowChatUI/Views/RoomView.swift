@@ -28,6 +28,8 @@ struct RoomView: View {
                             VStack {
                                 Text(item.name)
                                     .font(.system(size: 16, weight: .semibold))
+                                
+                                //Toggle button for showing and Hiding Views
                                 Button(action: {
                                     toggleExpansion(for: item.id)
                                 }) {
@@ -39,6 +41,8 @@ struct RoomView: View {
                             .padding(5)
 
                             if item.admin {
+                                
+                                //Delete button action if user is an admin
                                 Button(action: {
                                     selectedItem = item
                                     isShowingBottomSheet.toggle()
@@ -57,6 +61,8 @@ struct RoomView: View {
                                     }
                                 }
                             } else {
+                                
+                                //Delete button action if user is not an admin
                                 Button(action: {
                                     deleteItem(item)
                                 }) {
@@ -100,6 +106,7 @@ struct RoomView: View {
         }
     }
 
+    // Function for toggling Shows
     private func toggleExpansion(for id: UUID) {
         if expandedItems.contains(id) {
             expandedItems.remove(id)
@@ -108,6 +115,7 @@ struct RoomView: View {
         }
     }
 
+    // Function for deleting Rooms
     private func deleteItem(_ item: RoomItem) {
         if let index = roomList.firstIndex(where: { $0.id == item.id }) {
             roomList.remove(at: index)

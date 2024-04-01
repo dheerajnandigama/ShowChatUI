@@ -12,7 +12,13 @@ struct HomeView: View {
         ZStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
+                    
+                    // Profile Header View
+                    
                     ProfileHeaderView()
+                    
+                    // Follower List View
+                    
                     FollowerListView()
                 }
                 .padding(5)
@@ -20,6 +26,9 @@ struct HomeView: View {
             
             VStack {
                 Spacer()
+                
+                // Floating Button to create a room
+                
                 Button(action: {
                     
                 }) {

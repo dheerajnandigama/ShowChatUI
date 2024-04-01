@@ -16,6 +16,8 @@ struct ProfileHeaderView: View {
                     Text("ShowchatCat")
                         .font(.system(size: 20, weight: .semibold))
                         .padding()
+                    
+                    // Edit Icon
                     Button {
                     } label: {
                         Image(.iconEdit)
@@ -25,6 +27,8 @@ struct ProfileHeaderView: View {
                           .clipShape(Circle())
 
                         }
+                    
+                    // Settings Icon
                     Button {
                     } label: {
                         Image(.union)

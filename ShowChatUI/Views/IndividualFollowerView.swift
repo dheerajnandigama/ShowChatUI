@@ -114,6 +114,7 @@ struct IndividualFollowerView: View {
         }
     }
     
+    // Function for toggling Shows
     private func toggleExpansion(for id: UUID) {
         if expandedItems.contains(id) {
             expandedItems.remove(id)
@@ -122,6 +123,7 @@ struct IndividualFollowerView: View {
         }
     }
     
+    //Function for following back the user
     private func toggleFollow(for id: UUID) {
         if !followedItems.contains(id) {
             followedItems.insert(id)
@@ -132,6 +134,7 @@ struct IndividualFollowerView: View {
         }
     }
     
+    //Function for removing followers
     private func deleteItem(_ id: UUID) {
         if let index = userList.firstIndex(where: { $0.id == id }) {
             userList.remove(at: index)

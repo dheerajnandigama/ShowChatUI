@@ -13,6 +13,8 @@ struct SearchBarViewModel: View {
 
     var body: some View {
         HStack(spacing: 0) {
+            
+            // Implementation of  Search bar
             Button(action: {
             }) {
                 Image(.search)

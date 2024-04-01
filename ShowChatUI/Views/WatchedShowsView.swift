@@ -11,6 +11,8 @@ import SwiftUI
 struct WatchedShowsView: View {
     var body: some View {
         HStack{
+            
+            //List of all shows
             ForEach(showList, id: \.id) { item in
                 ScrollView(.horizontal, showsIndicators: false){
                         Image(item.img)
