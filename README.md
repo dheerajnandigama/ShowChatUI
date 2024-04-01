@@ -1,10 +1,7 @@
 ## ShowChatUI
 # WATCH IN THE SIMULATOR VIEW !
 
-<div align="center">
 https://github.com/dheerajnandigama/ShowChatUI/assets/53605855/ea20cc04-9d9e-473c-b562-956addc4f1fa
-<div>
-
 
 * Profile header displays user's identity with profile picture and username. Provideed options for editing profile and accessing settings.
 * Statistics section offers numbers for historical chats, followers, and followings.
